@@ -5,6 +5,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @SpringBootApplication
 @RestController
 public class TestSpringApplication {
@@ -13,8 +15,8 @@ public class TestSpringApplication {
 		SpringApplication.run(TestSpringApplication.class, args);
 	}
 	@GetMapping
-	public String hello(){
-		return "Hello World";
+	public List<String> hello(){
+		return List.of("Hello", "World");
 	}
 
 }
